@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Los Pollos Hermanos</title>
+
+    <script src="los.js" defer></script>
+
+    <link rel="icon" type="image/png" href="images/los.png">
+
+    <!-- LInks -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+        crossorigin="anonymous"
+    >
+
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    >
+    <link rel="stylesheet" href="ide.css">
+
+    <script
+        defer
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous">
+    </script>
+</head>
+
+<body>
+    <div class="sticky-top">
+    <div class="scroll-watcher"></div>
+
+    <!-- Black Navbar -->
+    <nav class="navbar navbar-expand-sm bg-dark second-navbar">
+        <div class="container">
+
+            <ul class="navbar-nav flex-row gap-3">
+
+                <li class="nav-item">
+                    <a href="https://www.amc.com/" data-i18n="careers" class="nav-linkdva active fs-6">
+                        Careers
+                    </a>
+                </li>
+
+                <li class="nav-item dropdown">
+
+                    <a  data-i18n="languages"
+                        class="nav-linkdva active fs-6 dropdown-toggle"
+                        href="#"
+                        role="button"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false"
+                    >
+                        Languages
+                    </a>
+
+                    <ul class="dropdown-menu bg-warning">
+                        <li>
+                            <a class="dropdown-item" data-i18n="english" href="#"
+                            onclick="changeLanguage('en'); return false;">English</a>
+                        </li>
+
+                        <li>
+                            <a class="dropdown-item" data-i18n="spanish" href="#"
+                            onclick="changeLanguage('es'); return false;">Espanol</a>
+                        </li>
+                    </ul>
+
+                </li>
+
+            </ul>
+
+        </div>
+    </nav>
+
+    <!-- Main Navbar -->
+    <nav class="navbar navbar-expand-sm bg-warning ">
+
+        <div class="container">
+
+            <!-- Logo -->
+            <a class="navbar-brand" href="inte.html">
+                <img
+                    src="images/los.png"
+                    class="lospojo"
+                    width="70"
+                    height="70"
+                    alt="Los Pollos Hermanos logo"
+                >
+            </a>
+
+
+            <!-- Hamburger -->
+            <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarMenu"
+                aria-controls="navbarMenu"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+            >
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+
+            <!-- Collapsible Menu -->
+            <div class="collapse navbar-collapse" id="navbarMenu">
+
+                <ul class="navbar-nav mx-auto gap-2">
+
+                    <li class="nav-item">
+                        <a href="delivery.html" data-i18n="delivery" class="nav-link active fs-4">
+                            Delivery
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="giftcards.html" data-i18n="gift_cards" class="nav-link active fs-4 text-nowrap">
+                            Gift Cards
+                        </a>
+                    </li>
+
+
+                    <!-- Our Menu -->
+                    <li class="nav-item dropdown">
+
+                        <a
+                            href="#"
+                            class="nav-link active fs-4 dropdown-toggle"
+                            id="menuDropdown"
+                            role="button"
+                            data-bs-toggle="dropdown"
+                            aria-expanded="false"
+                            data-i18n="our_menu"
+                        >
+                            Our Menu
+                        </a>
+
+                        <ul
+                            class="dropdown-menu bg-warning"
+                            aria-labelledby="menuDropdown"
+                        >
+                            <li>
+                                <a class="dropdown-item" data-i18n="breakfast" href="breakfast.html">
+                                    Breakfast
+                                </a>
+                            </li>
+
+                            <li>
+                                <a class="dropdown-item" data-i18n="chicken" href="chicken.html">
+                                    Chicken
+                                </a>
+                            </li>
+
+                            <li>
+                                <a class="dropdown-item" data-i18n="fries_sides" href="Fries&Sides.html">
+                                    Fries & Sides
+                                </a>
+                            </li>
+                        </ul>
+
+                    </li>
+
+
+                    <!-- About Us -->
+                    <li class="nav-item dropdown">
+
+                        <a
+                            href="#"
+                            class="nav-link active fs-4 dropdown-toggle"
+                            id="aboutDropdown"
+                            role="button"
+                            data-bs-toggle="dropdown"
+                            aria-expanded="false"
+                            data-i18n="about_us"
+                        >
+                            About Us
+                        </a>
+
+                        <ul
+                            class="dropdown-menu bg-warning"
+                            aria-labelledby="aboutDropdown"
+                        >
+                            <li>
+                                <a class="dropdown-item" data-i18n="our_food" href="ourfood.html">
+                                    Our Food
+                                </a>
+                            </li>
+
+                            <li>
+                                <a class="dropdown-item" data-i18n="our_company" href="aboutus.html">
+                                    Our Company
+                                </a>
+                            </li>
+                        </ul>
+
+                    </li>
+
+                </ul>
+
+
+                <!-- Search -->
+                <form class="d-flex">
+
+                    <input
+                        class="form-control me-2"
+                        type="search"
+                        placeholder="Search"
+                        aria-label="Search"
+                    >
+
+                    <a href="search-empty.html" data-i18n="search_button" class="btn btn-dark">SEARCH</a>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+    </div>
+
+
+
+
+<div id="myCarousel" class="carousel slide">
+  <div class="carousel-inner">
+
+    <!-- First image (your original image) -->
+    <div class="carousel-item active">
+      <img src="images/test.png"
+           class="d-block w-100 img-fluid"
+           alt="First image">
+    </div>
+
+    <!-- Second image -->
+    <div class="carousel-item">
+      <img src="images/test2.png"
+           class="d-block w-100 img-fluid"
+           alt="Second image">
+    </div>
+
+  </div>
+
+  <!-- Left arrow -->
+  <button class="carousel-control-prev" type="button"
+          data-bs-target="#myCarousel"
+          data-bs-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </button>
+
+  <!-- Right arrow -->
+  <button class="carousel-control-next" type="button"
+          data-bs-target="#myCarousel"
+          data-bs-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </button>
+
+</div>
+
+    <!-- Main Menu -->
+    <div class="container my-container mt-5">
+
+        <div class="col text-center mb-5 fade-img">
+
+        <video  id="mainVideo"
+       class="card-img-top mt-5"
+       autoplay
+       loop
+       controls
+       playsinline
+       controlsList="nodownload noplaybackrate nofullscreen"
+       disablePictureInPicture>
+
+            <source src="video/los pollos hermanos original ad.mp4" type="video/mp4">
+
+        </video>
+
+        </div>
+
+    </div>
+
+    <!-- Cards -->
+    <div class="container fade-img">
+
+        <div class="row row-cols-2 gx-2 gy-1">
+
+            <!-- Card 1 -->
+            <div class="col">
+
+                <div class="card bg-warning overflow-hidden">
+
+                    <a href="chicken.html">
+                        <img
+                            src="images/discount.png"
+                            class="card-img-top zoom-img mainimg"
+                            alt="Los Pollos Hermanos"
+                        >
+                    </a>
+
+                </div>
+
+                <div class="card-body"></div>
+
+            </div>
+
+
+            <!-- Card 2 -->
+            <div class="col">
+
+                <div class="card bg-warning overflow-hidden">
+
+                    <a href="giftcards.html">
+                        <img
+                            src="images/giftcards.png"
+                            class="card-img-top zoom-img mainimg"
+                            alt="Los Pollos Hermanos"
+                        >
+                    </a>
+
+                </div>
+
+                <div class="card-body"></div>
+
+            </div>
+
+
+            <!-- Card 3 -->
+            <div class="col">
+
+                <div class="card bg-warning overflow-hidden">
+
+                    <a href="delivery.html">
+                        <img
+                            src="images/delivery2.png"
+                            class="card-img-top zoom-img mainimg"
+                            alt="Los Pollos Hermanos"
+                        >
+                    </a>
+
+                </div>
+
+                <div class="card-body"></div>
+
+            </div>
+
+
+            <!-- Card 4 -->
+            <div class="col">
+
+                <div class="card bg-warning overflow-hidden">
+
+                    <a href="https://www.amc.com/">
+                        <img
+                            src="images/joinus.png"
+                            class="card-img-top zoom-img mainimg"
+                            alt="Los Pollos Hermanos"
+                        >
+                    </a>
+
+                </div>
+
+                <div class="card-body"></div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+    <footer class="mt-5">
+
+        <div class="container">
+
+            <div class="row">
+
+                <div
+                    class="col-md-4 mb-3"
+                    style="margin-top: 50px;"
+                >
+
+                    <h5 data-i18n="about_us">About Us</h5>
+
+                    <p data-i18n="footer_description">
+                        At Los Pollos Hermanos, quality, consistency,
+                        and respect are the foundation of everything we do.
+                        Every meal is prepared with exceptional care,
+                        ensuring every guest receives the same outstanding
+                        experience they have come to expect.
+                        Excellence is our tradition.
+                    </p>
+
+                </div>
+
+
+                <div class="col-md-4 mb-3">
+
+                    <h5 data-i18n="quick_links">Quick Links</h5>
+
+                    <ul class="list-unstyled">
+
+                        <li>
+                            <a
+                                href="inte.html"
+                                class="text-decoration-none text-white"
+                                data-i18n="home"
+                            >
+                                Home
+                            </a>
+                        </li>
+
+                        <li>
+                            <a
+                                href="#"
+                                class="text-decoration-none text-white"
+                                data-i18n="services"
+                            >
+                                Services
+                            </a>
+                        </li>
+
+                        <li>
+                            <a
+                                href="https://www.youtube.com/watch?v=J9cwsKHjTEk"
+                                class="text-decoration-none text-white"
+                                data-i18n="contact"
+                            >
+                                Contact
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+                <div class="col-md-4 mb-3">
+
+                    <h5 data-i18n="follow_us">Follow Us</h5>
+
+                    <ul class="list-inline social-icons">
+
+                        <li class="list-inline-item">
+                            <a
+                                href="https://ce.amc.com/series/breaking-bad"
+                                class="text-white"
+                                aria-label="Facebook"
+                            >
+                                <i class="bi bi-facebook"></i>
+                            </a>
+                        </li>
+
+                        <li class="list-inline-item">
+                            <a
+                                href="https://ce.amc.com/series/breaking-bad"
+                                class="text-white"
+                                aria-label="Twitter"
+                            >
+                                <i class="bi bi-twitter"></i>
+                            </a>
+                        </li>
+
+                        <li class="list-inline-item">
+                            <a
+                                href="https://ce.amc.com/series/breaking-bad"
+                                class="text-white"
+                                aria-label="instagram"
+                            >
+                                <i class="bi bi-instagram"></i>
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+
+            <hr class="mb-4">
+
+
+            <div class="row">
+
+                <div class="col-md-12 text-center">
+
+                    <p data-i18n="copyright">
+                        &copy; 2026 Los Pollos Hermanos.
+                        All rights reserved.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+</body>
+
+</html>
